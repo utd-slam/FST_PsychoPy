@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on November 09, 2020, at 12:43
+This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
+    on December 17, 2020, at 14:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,10 +39,10 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.2.5'
+psychopyVersion = '2020.2.9'
 expName = 'FST_clear'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '001'}
-dlg = gui.DlgFromDict(dictionary=expInfo, sort_keys=False, title=expName)
+dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
@@ -55,7 +55,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\heard\\Documents\\GitHub\\FST_PsychoPy\\FST_v1_lastrun.py',
+    originPath='C:\\Users\\mjh200002\\Documents\\GitHub\\FST_PsychoPy\\FST_v1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -65,7 +65,7 @@ logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a f
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
 frameTolerance = 0.001  # how close to onset before 'same' frame
 
-# Start Code - component code to be run before the window creation
+# Start Code - component code to be run after the window creation
 
 # Setup the Window
 win = visual.Window(
@@ -87,7 +87,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "welcome_screen"
 welcome_screenClock = core.Clock()
 text_welcome = visual.TextStim(win=win, name='text_welcome',
-    text='Thank you for participating in our experiment!\n\nIn this experiment, you will listen to some sentences and will be asked a question about each sentence. \n\nPlease make sure you are wearing headphones. \n\n',
+    text='Thank you for participating in our experiment! Please make sure you are wearing headphones and are in a quiet, distraction-free place. \n\nIn this experiment, you will listen to some sentences that will sound like they are spoken in a noisy room. You will be asked a question about each sentence. \n\n\n\n',
     font='Arial',
     pos=(0, .1), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -151,7 +151,7 @@ key_inst = keyboard.Keyboard()
 # Initialize components for Routine "practice_instr"
 practice_instrClock = core.Clock()
 text_prac1 = visual.TextStim(win=win, name='text_prac1',
-    text="Let's practice. For the rest of the experiment, please stop adjusting the volume on your computer.\n\nPress the LEFT key if the gender of performing action is MALE.\nPress the RIGHT key if the gender of performing action is FEMALE.\n\nYou have 5 seconds to respond each trial.\nDuring the practice, you will be told if you were right or wrong.",
+    text="Let's practice. For the rest of the experiment, please stop adjusting the volume on your computer.\n\nPress the RIGHT ARROW key if the gender of the person performing the action is MALE.\nPress the LEFT ARROW key if the gender of the person performing the action is FEMALE.\n\nYou have 5 seconds to respond each trial.\nDuring the practice, you will be told if you were right or wrong.",
     font='Arial',
     pos=(0, .13), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -173,17 +173,17 @@ trial_count=0
 stim_present = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='stim_present')
 stim_present.setVolume(1)
-text_qm = visual.TextStim(win=win, name='text_qm',
-    text='MALE <',
+text_qf = visual.TextStim(win=win, name='text_qf',
+    text='FEMALE <',
     font='Arial',
-    pos=(-.25, 0), height=0.07, wrapWidth=None, ori=0, 
+    pos=(-.29, 0), height=0.07, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
-text_qf = visual.TextStim(win=win, name='text_qf',
-    text='> FEMALE',
+text_qm = visual.TextStim(win=win, name='text_qm',
+    text='> MALE',
     font='Arial',
-    pos=(.29, 0), height=0.07, wrapWidth=None, ori=0, 
+    pos=(.25, 0), height=0.07, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -217,7 +217,7 @@ key_exp_cont = keyboard.Keyboard()
 # Initialize components for Routine "main_instr"
 main_instrClock = core.Clock()
 text_main1 = visual.TextStim(win=win, name='text_main1',
-    text="Now let's move onto the real experiment.\n\nPress the LEFT key if the gender of performing action is MALE.\nPress the RIGHT key if the gender of performing action is FEMALE.\n\nYou have 5 seconds to respond each trial.\nYou will not be told if you are right or wrong after each sentence.",
+    text="Now let's move onto the real experiment.\n\nPress the LEFT key if the gender of the people performing the action is FEMALE.\nPress the RIGHT key if the gender of the people performing the action is MALE.\n\nYou have 5 seconds to respond each trial.\nYou will not be told if you are right or wrong after each sentence.",
     font='Arial',
     pos=(0, .13), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -239,17 +239,17 @@ trial_count=0
 stim_present = sound.Sound('A', secs=-1, stereo=True, hamming=True,
     name='stim_present')
 stim_present.setVolume(1)
-text_qm = visual.TextStim(win=win, name='text_qm',
-    text='MALE <',
+text_qf = visual.TextStim(win=win, name='text_qf',
+    text='FEMALE <',
     font='Arial',
-    pos=(-.25, 0), height=0.07, wrapWidth=None, ori=0, 
+    pos=(-.29, 0), height=0.07, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
-text_qf = visual.TextStim(win=win, name='text_qf',
-    text='> FEMALE',
+text_qm = visual.TextStim(win=win, name='text_qm',
+    text='> MALE',
     font='Arial',
-    pos=(.29, 0), height=0.07, wrapWidth=None, ori=0, 
+    pos=(.25, 0), height=0.07, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -407,7 +407,7 @@ for thisTutorial_trial in tutorial_trials:
     # ------Prepare to start Routine "tutorial_stim"-------
     continueRoutine = True
     # update component parameters for each repeat
-    tuto_sent.setSound(sent_stim, secs=2.5, hamming=True)
+    tuto_sent.setSound(sent_stim, secs=4, hamming=True)
     tuto_sent.setVolume(1, log=False)
     text_inst1.setText(inst1)
     text_inst2.setText(inst2)
@@ -446,7 +446,7 @@ for thisTutorial_trial in tutorial_trials:
             tuto_sent.play(when=win)  # sync with win flip
         if tuto_sent.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > tuto_sent.tStartRefresh + 2.5-frameTolerance:
+            if tThisFlipGlobal > tuto_sent.tStartRefresh + 4-frameTolerance:
                 # keep track of stop time/frame for later
                 tuto_sent.tStop = t  # not accounting for scr refresh
                 tuto_sent.frameNStop = frameN  # exact frame index
@@ -760,15 +760,15 @@ for thisPractice_trial in practice_trials:
     
     # ------Prepare to start Routine "stim_resp"-------
     continueRoutine = True
-    routineTimer.add(8.000000)
+    routineTimer.add(9.500000)
     # update component parameters for each repeat
-    stim_present.setSound(sent_stim, secs=2.5, hamming=True)
+    stim_present.setSound(sent_stim, secs=4, hamming=True)
     stim_present.setVolume(1, log=False)
     key_resp.keys = []
     key_resp.rt = []
     _key_resp_allKeys = []
     # keep track of which components have finished
-    stim_respComponents = [stim_present, text_qm, text_qf, fixation, key_resp]
+    stim_respComponents = [stim_present, text_qf, text_qm, fixation, key_resp]
     for thisComponent in stim_respComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -791,40 +791,23 @@ for thisPractice_trial in practice_trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         # start/stop stim_present
-        if stim_present.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+        if stim_present.status == NOT_STARTED and t >= 0.5-frameTolerance:
             # keep track of start time/frame for later
             stim_present.frameNStart = frameN  # exact frame index
             stim_present.tStart = t  # local t and not account for scr refresh
             stim_present.tStartRefresh = tThisFlipGlobal  # on global time
-            stim_present.play(when=win)  # sync with win flip
+            stim_present.play()  # start the sound (it finishes automatically)
         if stim_present.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > stim_present.tStartRefresh + 2.5-frameTolerance:
+            if tThisFlipGlobal > stim_present.tStartRefresh + 4-frameTolerance:
                 # keep track of stop time/frame for later
                 stim_present.tStop = t  # not accounting for scr refresh
                 stim_present.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(stim_present, 'tStopRefresh')  # time at next scr refresh
                 stim_present.stop()
         
-        # *text_qm* updates
-        if text_qm.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
-            # keep track of start time/frame for later
-            text_qm.frameNStart = frameN  # exact frame index
-            text_qm.tStart = t  # local t and not account for scr refresh
-            text_qm.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_qm, 'tStartRefresh')  # time at next scr refresh
-            text_qm.setAutoDraw(True)
-        if text_qm.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_qm.tStartRefresh + 5-frameTolerance:
-                # keep track of stop time/frame for later
-                text_qm.tStop = t  # not accounting for scr refresh
-                text_qm.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_qm, 'tStopRefresh')  # time at next scr refresh
-                text_qm.setAutoDraw(False)
-        
         # *text_qf* updates
-        if text_qf.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+        if text_qf.status == NOT_STARTED and tThisFlip >= 4.5-frameTolerance:
             # keep track of start time/frame for later
             text_qf.frameNStart = frameN  # exact frame index
             text_qf.tStart = t  # local t and not account for scr refresh
@@ -840,6 +823,23 @@ for thisPractice_trial in practice_trials:
                 win.timeOnFlip(text_qf, 'tStopRefresh')  # time at next scr refresh
                 text_qf.setAutoDraw(False)
         
+        # *text_qm* updates
+        if text_qm.status == NOT_STARTED and tThisFlip >= 4.5-frameTolerance:
+            # keep track of start time/frame for later
+            text_qm.frameNStart = frameN  # exact frame index
+            text_qm.tStart = t  # local t and not account for scr refresh
+            text_qm.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_qm, 'tStartRefresh')  # time at next scr refresh
+            text_qm.setAutoDraw(True)
+        if text_qm.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_qm.tStartRefresh + 5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_qm.tStop = t  # not accounting for scr refresh
+                text_qm.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_qm, 'tStopRefresh')  # time at next scr refresh
+                text_qm.setAutoDraw(False)
+        
         # *fixation* updates
         if fixation.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
@@ -850,7 +850,7 @@ for thisPractice_trial in practice_trials:
             fixation.setAutoDraw(True)
         if fixation.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > fixation.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > fixation.tStartRefresh + 9.5-frameTolerance:
                 # keep track of stop time/frame for later
                 fixation.tStop = t  # not accounting for scr refresh
                 fixation.frameNStop = frameN  # exact frame index
@@ -872,7 +872,7 @@ for thisPractice_trial in practice_trials:
             win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if key_resp.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > key_resp.tStartRefresh + 7.5-frameTolerance:
+            if tThisFlipGlobal > key_resp.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 key_resp.tStop = t  # not accounting for scr refresh
                 key_resp.frameNStop = frameN  # exact frame index
@@ -1168,15 +1168,15 @@ for thisMain_trial in main_trials:
     
     # ------Prepare to start Routine "stim_resp"-------
     continueRoutine = True
-    routineTimer.add(8.000000)
+    routineTimer.add(9.500000)
     # update component parameters for each repeat
-    stim_present.setSound(sent_stim, secs=2.5, hamming=True)
+    stim_present.setSound(sent_stim, secs=4, hamming=True)
     stim_present.setVolume(1, log=False)
     key_resp.keys = []
     key_resp.rt = []
     _key_resp_allKeys = []
     # keep track of which components have finished
-    stim_respComponents = [stim_present, text_qm, text_qf, fixation, key_resp]
+    stim_respComponents = [stim_present, text_qf, text_qm, fixation, key_resp]
     for thisComponent in stim_respComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1199,40 +1199,23 @@ for thisMain_trial in main_trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         # start/stop stim_present
-        if stim_present.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
+        if stim_present.status == NOT_STARTED and t >= 0.5-frameTolerance:
             # keep track of start time/frame for later
             stim_present.frameNStart = frameN  # exact frame index
             stim_present.tStart = t  # local t and not account for scr refresh
             stim_present.tStartRefresh = tThisFlipGlobal  # on global time
-            stim_present.play(when=win)  # sync with win flip
+            stim_present.play()  # start the sound (it finishes automatically)
         if stim_present.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > stim_present.tStartRefresh + 2.5-frameTolerance:
+            if tThisFlipGlobal > stim_present.tStartRefresh + 4-frameTolerance:
                 # keep track of stop time/frame for later
                 stim_present.tStop = t  # not accounting for scr refresh
                 stim_present.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(stim_present, 'tStopRefresh')  # time at next scr refresh
                 stim_present.stop()
         
-        # *text_qm* updates
-        if text_qm.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
-            # keep track of start time/frame for later
-            text_qm.frameNStart = frameN  # exact frame index
-            text_qm.tStart = t  # local t and not account for scr refresh
-            text_qm.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_qm, 'tStartRefresh')  # time at next scr refresh
-            text_qm.setAutoDraw(True)
-        if text_qm.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_qm.tStartRefresh + 5-frameTolerance:
-                # keep track of stop time/frame for later
-                text_qm.tStop = t  # not accounting for scr refresh
-                text_qm.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_qm, 'tStopRefresh')  # time at next scr refresh
-                text_qm.setAutoDraw(False)
-        
         # *text_qf* updates
-        if text_qf.status == NOT_STARTED and tThisFlip >= 3-frameTolerance:
+        if text_qf.status == NOT_STARTED and tThisFlip >= 4.5-frameTolerance:
             # keep track of start time/frame for later
             text_qf.frameNStart = frameN  # exact frame index
             text_qf.tStart = t  # local t and not account for scr refresh
@@ -1248,6 +1231,23 @@ for thisMain_trial in main_trials:
                 win.timeOnFlip(text_qf, 'tStopRefresh')  # time at next scr refresh
                 text_qf.setAutoDraw(False)
         
+        # *text_qm* updates
+        if text_qm.status == NOT_STARTED and tThisFlip >= 4.5-frameTolerance:
+            # keep track of start time/frame for later
+            text_qm.frameNStart = frameN  # exact frame index
+            text_qm.tStart = t  # local t and not account for scr refresh
+            text_qm.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text_qm, 'tStartRefresh')  # time at next scr refresh
+            text_qm.setAutoDraw(True)
+        if text_qm.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_qm.tStartRefresh + 5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_qm.tStop = t  # not accounting for scr refresh
+                text_qm.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_qm, 'tStopRefresh')  # time at next scr refresh
+                text_qm.setAutoDraw(False)
+        
         # *fixation* updates
         if fixation.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
@@ -1258,7 +1258,7 @@ for thisMain_trial in main_trials:
             fixation.setAutoDraw(True)
         if fixation.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > fixation.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > fixation.tStartRefresh + 9.5-frameTolerance:
                 # keep track of stop time/frame for later
                 fixation.tStop = t  # not accounting for scr refresh
                 fixation.frameNStop = frameN  # exact frame index
@@ -1280,7 +1280,7 @@ for thisMain_trial in main_trials:
             win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if key_resp.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > key_resp.tStartRefresh + 7.5-frameTolerance:
+            if tThisFlipGlobal > key_resp.tStartRefresh + 9-frameTolerance:
                 # keep track of stop time/frame for later
                 key_resp.tStop = t  # not accounting for scr refresh
                 key_resp.frameNStop = frameN  # exact frame index
