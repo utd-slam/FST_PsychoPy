@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on December 17, 2020, at 14:52
+    on December 18, 2020, at 08:47
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -151,9 +151,9 @@ key_inst = keyboard.Keyboard()
 # Initialize components for Routine "practice_instr"
 practice_instrClock = core.Clock()
 text_prac1 = visual.TextStim(win=win, name='text_prac1',
-    text="Let's practice. For the rest of the experiment, please stop adjusting the volume on your computer.\n\nPress the RIGHT ARROW key if the gender of the person performing the action is MALE.\nPress the LEFT ARROW key if the gender of the person performing the action is FEMALE.\n\nYou have 5 seconds to respond each trial.\nDuring the practice, you will be told if you were right or wrong.",
+    text="Let's practice. For the rest of the experiment, please stop adjusting the volume on your computer.\n\nPress the RIGHT ARROW key if the gender of the person performing the action is MALE.\n\nPress the LEFT ARROW key if the gender of the person performing the action is FEMALE.\n\nYou have 5 seconds to respond each trial.\nDuring the practice, you will be told if you were right or wrong.",
     font='Arial',
-    pos=(0, .13), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, .12), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -217,9 +217,9 @@ key_exp_cont = keyboard.Keyboard()
 # Initialize components for Routine "main_instr"
 main_instrClock = core.Clock()
 text_main1 = visual.TextStim(win=win, name='text_main1',
-    text="Now let's move onto the real experiment.\n\nPress the LEFT key if the gender of the people performing the action is FEMALE.\nPress the RIGHT key if the gender of the people performing the action is MALE.\n\nYou have 5 seconds to respond each trial.\nYou will not be told if you are right or wrong after each sentence.",
+    text="Now let's move onto the real experiment.\n\nPress the LEFT ARROW key if the gender of the people performing the action is FEMALE.\n\nPress the RIGHT ARROW key if the gender of the people performing the action is MALE.\n\nYou have 5 seconds to respond each trial.\nYou will not be told if you are right or wrong after each sentence.",
     font='Arial',
-    pos=(0, .13), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, .12), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
