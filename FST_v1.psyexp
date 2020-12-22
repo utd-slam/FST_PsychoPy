@@ -365,7 +365,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Now let's move onto the real experiment.&amp;#10;&amp;#10;Press the LEFT ARROW key if the gender of the people performing the action is FEMALE.&amp;#10;&amp;#10;Press the RIGHT ARROW key if the gender of the people performing the action is MALE.&amp;#10;&amp;#10;You have 5 seconds to respond each trial.&amp;#10;You will not be told if you are right or wrong after each sentence." valType="extendedStr"/>
+        <Param name="text" updates="constant" val="Now let's move onto the real experiment. Please stop adjusting the volume on your headphones!&amp;#10;&amp;#10;Press the LEFT ARROW key if the gender of the people performing the action is FEMALE.&amp;#10;&amp;#10;Press the RIGHT ARROW key if the gender of the people performing the action is MALE.&amp;#10;&amp;#10;You have 5 seconds to respond each trial.&amp;#10;You will not be told if you are right or wrong after each sentence." valType="extendedStr"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
