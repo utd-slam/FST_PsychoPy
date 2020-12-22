@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.9),
-    on December 18, 2020, at 08:47
+    on December 22, 2020, at 14:51
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -89,7 +89,7 @@ welcome_screenClock = core.Clock()
 text_welcome = visual.TextStim(win=win, name='text_welcome',
     text='Thank you for participating in our experiment! Please make sure you are wearing headphones and are in a quiet, distraction-free place. \n\nIn this experiment, you will listen to some sentences that will sound like they are spoken in a noisy room. You will be asked a question about each sentence. \n\n\n\n',
     font='Arial',
-    pos=(0, .1), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, .09), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -217,7 +217,7 @@ key_exp_cont = keyboard.Keyboard()
 # Initialize components for Routine "main_instr"
 main_instrClock = core.Clock()
 text_main1 = visual.TextStim(win=win, name='text_main1',
-    text="Now let's move onto the real experiment.\n\nPress the LEFT ARROW key if the gender of the people performing the action is FEMALE.\n\nPress the RIGHT ARROW key if the gender of the people performing the action is MALE.\n\nYou have 5 seconds to respond each trial.\nYou will not be told if you are right or wrong after each sentence.",
+    text="Now let's move onto the real experiment. Please stop adjusting the volume of your headphones!\n\nPress the LEFT ARROW key if the gender of the people performing the action is FEMALE.\n\nPress the RIGHT ARROW key if the gender of the people performing the action is MALE.\n\nYou have 5 seconds to respond each trial.\nYou will not be told if you are right or wrong after each sentence.",
     font='Arial',
     pos=(0, .12), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
